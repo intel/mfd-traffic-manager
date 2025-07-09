@@ -1,0 +1,27 @@
+[build-system]
+requires = [
+    "setuptools>=80.4.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[project]
+name = "mfd-traffic-manager"
+description = "Module for handling variety types of traffic under one consistent API."
+requires-python = ">=3.10, <3.14"
+version = "1.17.0"
+dynamic = ["dependencies"]
+license-files = ["LICENSE.md", "AUTHORS.md"]
+readme = {file = "README.md", content-type = "text/markdown"}
+
+[project.urls]
+Homepage = "https://github.com/intel/mfd"
+Repository = "https://github.com/intel/mfd-traffic-manager"
+Issues = "https://github.com/intel/mfd-traffic-manager/issues"
+Changelog = "https://github.com/intel/mfd-traffic-manager/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+exclude = ["examples", "tests*", "sphinx-doc"]
