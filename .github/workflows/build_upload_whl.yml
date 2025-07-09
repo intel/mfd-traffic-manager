@@ -97,7 +97,7 @@ jobs:
           python -m venv bump_version
           source bump_version/bin/activate
           pip install python-semantic-release~=10.2
-          pip install -r ${{ inputs.SOURCE_PATH }}/requirements-dev.txt
+          pip install mfd-code-quality
           mfd-create-config-files --project-dir ./${{ inputs.SOURCE_PATH }}
           cd ${{ inputs.SOURCE_PATH }}
           version_after_bump=$(semantic-release version --print | tail -n 1 | tr -d '\n')
