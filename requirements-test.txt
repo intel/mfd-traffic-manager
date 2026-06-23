@@ -3,6 +3,6 @@
 pytest >= 9.0.3, < 10
 pytest-mock ~= 3.14
 
-coverage ~= 7.3.0
+coverage ~= 7.14.3
 
 mfd-connect
